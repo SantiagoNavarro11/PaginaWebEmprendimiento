@@ -1,0 +1,147 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  color: #fff;
+  background: url("assets/productos/ImagenFondo.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav a:hover {
+  color: #ff85c1;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+.btn {
+  padding: 12px 25px;
+  background: #ff85c1;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #ff4d94;
+}
+
+/* Productos */
+.productos {
+  padding: 80px 20px;
+  background: rgba(0,0,0,0.7);
+  text-align: center;
+}
+.productos h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.card h3 {
+  margin-bottom: 10px;
+  color: #ffb3da;
+}
+
+/* Contacto */
+.contacto {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+}
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  background: #25d366;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn-whatsapp:hover {
+  background: #1ebe57;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0,0,0,0.8);
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+}
