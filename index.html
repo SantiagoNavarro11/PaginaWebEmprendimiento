@@ -1,67 +1,378 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda de Belleza</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Iconos -->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-</head>
-<body>
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">🌸 Belleza Natural</div>
-    <nav class="nav">
-      <a href="#inicio">Inicio</a>
-      <a href="#productos">Productos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HESED · Línea capilar artesanal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <!-- Iconos -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Favicon opcional -->
+    <!-- <link rel="icon" type="image/png" href="img/favicon.png"> -->
+  </head>
+  <body>
+    <!-- Fondo con imagen + marca de agua -->
+    <div class="bg"></div>
+    <div class="bg-overlay"></div>
+    <div class="watermark"></div>
 
-  <!-- Hero con fondo -->
-  <section id="inicio" class="hero">
-    <div class="hero-content">
-      <h1>Brilla con lo mejor de la naturaleza</h1>
-      <p>Productos de belleza pensados para ti: crema, shampoo y acondicionador.</p>
-      <a href="#productos" class="btn">Ver productos</a>
-    </div>
-  </section>
+    <!-- Encabezado (sin menú) -->
+    <header class="hero">
+      <div class="hero__brand">
+        <img
+          src="assets/productos/ImagenFondo.jpg"
+          alt="HESED Logo"
+          class="hero__logo"
+        />
+        <h1 class="hero__title">HESED</h1>
+      </div>
+      <p class="hero__tag">Línea capilar natural · 100% artesanal</p>
+    </header>
 
-  <!-- Productos -->
-  <section id="productos" class="productos">
-    <h2>Nuestros Productos</h2>
-    <div class="productos-grid">
-      <div class="card">
-        <img src="assets/productos/ProductoHeesed.jpg" alt="Crema hidratante">
-        <h3>Crema Hidratante</h3>
-        <p>Nutre tu piel con ingredientes naturales y frescos.</p>
-      </div>
-      <div class="card">
-        <img src="assets/productos/ProductoHeesed.jpg" alt="Shampoo">
-        <h3>Shampoo</h3>
-        <p>Limpieza suave que fortalece tu cabello desde la raíz.</p>
-      </div>
-      <div class="card">
-        <img src="assets/productos/ProductoHeesed.jpg" alt="Acondicionador">
-        <h3>Acondicionador</h3>
-        <p>Suavidad y brillo que harán destacar tu melena.</p>
-      </div>
-    </div>
-  </section>
+    <main class="container">
+      <!-- Productos -->
+      <section aria-label="Productos" class="section">
+        <h2 class="section__title">Nuestros productos</h2>
+        <p class="section__hint">
+          Si te interesa alguno, presiona el
+          <strong>botón de WhatsApp</strong> 👇 para escribirnos.
+        </p>
 
-  <!-- Contacto / WhatsApp -->
-  <section id="contacto" class="contacto">
-    <h2>Contáctanos</h2>
-    <p>¿Quieres más información o hacer un pedido? Escríbenos directamente.</p>
-    <a href="https://wa.me/573107764463" target="_blank" class="btn-whatsapp">
-      <i class='bx bxl-whatsapp'></i> Chatear por WhatsApp
+        <div class="grid products">
+          <!-- PRODUCTO 1 -->
+          <article class="card product">
+            <div class="product__img">
+              <img
+                src="assets/productos/ShampooNutritivo.png"
+                alt="Shampoo Nutritivo"
+              />
+            </div>
+            <div class="product__body">
+              <h3 class="product__title">Shampoo Nutritivo</h3>
+              <p class="product__desc">
+                <strong>Fórmula natural libre de sal y parabenos.</strong> A
+                base de caléndula, romero, laurel, canela y vitaminas.
+              </p>
+              <ul class="product__benefits">
+                <li>Ayuda al crecimiento</li>
+                <li>Control caspa con aroma herbal</li>
+                <li>Aporta volumen y brillo</li>
+                <li>Hidratación profunda</li>
+                <li>Suavidad y sedosidad</li>
+                <li>Uso diario, resultados desde el primer uso</li>
+              </ul>
+              <div class="product__meta">
+                <span class="price">$ 15.000</span>
+                <span class="size">425 ml</span>
+                <span class="badge">100% artesanal</span>
+              </div>
+              <div class="stars" aria-label="4 de 5">★★★★☆</div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 2 -->
+          <article class="card product">
+            <div class="product__img">
+              <img
+                src="assets/productos/MascarillaCapilar.png"
+                alt="Mascarilla Capilar Repolarizadora y Restauradora Bioqueratina"
+              />
+            </div>
+            <div class="product__body">
+              <h3 class="product__title">
+                Mascarilla Repolarizadora Bioqueratina
+              </h3>
+              <p class="product__desc">
+                <strong>Fórmula natural</strong> a base de sábila, fécula de
+                maíz, canela y vitaminas.
+              </p>
+              <ul class="product__benefits">
+                <li>Repolarización intensa en zonas con daño</li>
+                <li>Estimula y fortalece desde la raíz</li>
+                <li>Hidratación profunda</li>
+                <li>Alisado progresivo con cada aplicación</li>
+                <li>Cabello más suave y sedoso</li>
+              </ul>
+              <div class="product__meta">
+                <span class="price">$ 30.000</span>
+                <span class="size">300 ml</span>
+                <span class="badge">100% artesanal</span>
+              </div>
+              <div class="stars" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 3 -->
+          <article class="card product">
+            <div class="product__img">
+              <img
+                src="assets/productos/MascarillaCapilar.png"
+                alt="Crema de Peinar Activación y Definición de Rizos"
+              />
+            </div>
+            <div class="product__body">
+              <h3 class="product__title">
+                Crema de Peinar Definición de Rizos
+              </h3>
+              <p class="product__desc">
+                <strong>Fórmula natural</strong> a base de proteínas, aceites
+                naturales y vitaminas.
+              </p>
+              <ul class="product__benefits">
+                <li>Evita el quiebre del cabello</li>
+                <li>Retiene la humedad</li>
+                <li>Hidratación profunda sin sensación grasa</li>
+                <li>Libre de sulfatos, siliconas y parabenos</li>
+              </ul>
+              <div class="product__meta">
+                <span class="price">$ 25.000</span>
+                <span class="size">300 ml</span>
+                <span class="badge">100% artesanal</span>
+              </div>
+              <div class="stars" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 4 (ejemplo a reemplazar) -->
+          <article class="card product">
+            <div class="product__img">
+              <img
+                src="assets/productos/MascarillaCapilar.png"
+                alt="Acondicionador Suavizante"
+              />
+            </div>
+            <div class="product__body">
+              <h3 class="product__title">Acondicionador Suavizante</h3>
+              <p class="product__desc">
+                Desenreda al instante, brillo sedoso y control del frizz.
+                <em>(Reemplaza este texto por el real)</em>
+              </p>
+              <ul class="product__benefits">
+                <li>Suavidad inmediata</li>
+                <li>Desenreda sin esfuerzo</li>
+                <li>Brillo y control</li>
+              </ul>
+              <div class="product__meta">
+                <span class="price">$ —</span>
+                <span class="size">— ml</span>
+                <span class="badge">Artesanal</span>
+              </div>
+              <div class="stars" aria-label="4 de 5">★★★★☆</div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 5 (ejemplo a reemplazar) -->
+          <article class="card product">
+            <div class="product__img">
+              <img
+                src="assets/productos/MascarillaCapilar.png"
+                alt="Spray Protector Térmico"
+              />
+            </div>
+            <div class="product__body">
+              <h3 class="product__title">Spray Protector</h3>
+              <p class="product__desc">
+                Escudo térmico y antipolución para un acabado luminoso.
+                <em>(Reemplaza este texto por el real)</em>
+              </p>
+              <ul class="product__benefits">
+                <li>Protección calor</li>
+                <li>Menos frizz</li>
+                <li>Brillo inmediato</li>
+              </ul>
+              <div class="product__meta">
+                <span class="price">$ —</span>
+                <span class="size">— ml</span>
+                <span class="badge">Artesanal</span>
+              </div>
+              <div class="stars" aria-label="4 de 5">★★★★☆</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Reseñas (5 clientes, con foto) -->
+      <section aria-label="Reseñas" class="section">
+        <h2 class="section__title">Lo que dicen nuestras clientas</h2>
+        <div class="grid reviews">
+          <figure class="card bubble">
+            <img
+              src="assets/productos/DavidSantiago.jpg"
+              alt="Ana"
+              class="avatar"
+            />
+            <figcaption>
+              <h4>Ana</h4>
+              <p>
+                “La mascarilla me cambió el cabello: más suave y manejable.”
+              </p>
+              <div class="stars">★★★★★</div>
+            </figcaption>
+          </figure>
+          <figure class="card bubble">
+            <img
+              src="assets/productos/DavidSantiago.jpg"
+              alt="Laura"
+              class="avatar"
+            />
+            <figcaption>
+              <h4>Laura</h4>
+              <p>
+                “El shampoo huele delicioso y sentí volumen desde el primer
+                uso.”
+              </p>
+              <div class="stars">★★★★★</div>
+            </figcaption>
+          </figure>
+          <figure class="card bubble">
+            <img
+              src="assets/productos/DavidSantiago.jpg"
+              alt="Sofía"
+              class="avatar"
+            />
+            <figcaption>
+              <h4>Sofía</h4>
+              <p>“La crema define mis rizos sin dejarlos pesados. Amo.”</p>
+              <div class="stars">★★★★☆</div>
+            </figcaption>
+          </figure>
+          <figure class="card bubble">
+            <img
+              src="assets/productos/DavidSantiago.jpg"
+              alt="Carolina"
+              class="avatar"
+            />
+            <figcaption>
+              <h4>Carolina</h4>
+              <p>
+                “Ingredientes naturales y resultados reales. Súper
+                recomendados.”
+              </p>
+              <div class="stars">★★★★★</div>
+            </figcaption>
+          </figure>
+          <figure class="card bubble">
+            <img
+              src="assets/productos/DavidSantiago.jpg"
+              alt="María"
+              class="avatar"
+            />
+            <figcaption>
+              <h4>María</h4>
+              <p>
+                “Mi cabello quedó con brillo y sin frizz. Excelente servicio.”
+              </p>
+              <div class="stars">★★★★☆</div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Formulario (visual) -->
+      <section aria-label="Contacto" class="section">
+        <h2 class="section__title">
+          ¿Tienes dudas o quieres dejar una reseña?
+        </h2>
+        <form id="reviewForm" class="form">
+          <div class="field">
+            <label for="name">Nombre</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="email">Correo</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Tu correo"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="rating">Calificación</label>
+            <select id="rating" name="rating" required>
+              <option value="5">★★★★★ — 5</option>
+              <option value="4">★★★★☆ — 4</option>
+              <option value="3">★★★☆☆ — 3</option>
+              <option value="2">★★☆☆☆ — 2</option>
+              <option value="1">★☆☆☆☆ — 1</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="comment">Comentario</label>
+            <textarea
+              id="comment"
+              name="comment"
+              rows="4"
+              placeholder="Escribe tu mensaje o reseña…"
+              required
+            ></textarea>
+          </div>
+          <button class="btn" type="submit">
+            <i class="fa-solid fa-paper-plane"></i> Enviar
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer__title">Síguenos</p>
+      <nav class="footer__social" aria-label="Redes sociales">
+        <a
+          href="https://instagram.com/tu_cuenta"
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://facebook.com/tu_pagina"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+      </nav>
+      <small class="copy">© 2025 HESED</small>
+    </footer>
+
+    <!-- Botón único de WhatsApp -->
+    <a
+      href="https://wa.me/573107764463?text=Hola%20HESED%2C%20estoy%20interesada%2Fo%20en%20sus%20productos%20capilares%20%F0%9F%8C%BF"
+      class="whatsapp"
+      target="_blank"
+      aria-label="Escríbenos por WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp__text">Escríbenos</span>
     </a>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 Belleza Natural - Todos los derechos reservados</p>
-  </footer>
-</body>
+    <!-- Modal bonito (éxito) -->
+    <div
+      id="modal"
+      class="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal__card">
+        <button class="modal__close" aria-label="Cerrar modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal__icon">✅</div>
+        <h3 id="modalTitle">¡Envío exitoso!</h3>
+        <p>Gracias por escribirnos. Te contactaremos muy pronto.</p>
+        <button class="btn btn--alt modal__ok">Listo</button>
+      </div>
+    </div>
+  </body>
 </html>
